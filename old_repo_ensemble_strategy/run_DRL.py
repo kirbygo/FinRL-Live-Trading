@@ -1,8 +1,13 @@
+path= r"C:\Users\kirby\Documents\Temp\Crypto2022\drl"
+
 # common library
 import pandas as pd
 import numpy as np
 import time
 from stable_baselines.common.vec_env import DummyVecEnv
+import os
+
+os.chdir(path)
 
 # preprocessor
 from preprocessing.preprocessors import *
@@ -10,7 +15,7 @@ from preprocessing.preprocessors import *
 from config.config import *
 # model
 from model.models import *
-import os
+
 
 def run_model() -> None:
     """Train the model."""
